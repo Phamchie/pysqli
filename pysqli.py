@@ -55,7 +55,7 @@ for payload in payload_name_bypass_1:
     time.sleep(0.10)
     result_1 = requests.get(url + payload)
     connects = requests.get(url)
-    if connects.status_code == 200:
+    if connects.status_code == 200 or connects.status_code == 301:
         if str(text_check) in result_1.text:
             if "The used SELECT" in result_1.text:
                 pass
