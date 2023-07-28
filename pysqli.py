@@ -1,4 +1,3 @@
-# upadte update update 
 import requests
 import os
 import re
@@ -58,6 +57,7 @@ for payload in payload_name_bypass_1:
     connects = requests.get(url)
     if connects.status_code == 200 or connects.status_code == 301:
         if str(text_check) in result_1.text:
+            pass
             if "The used SELECT" in result_1.text:
                 pass
             else:
