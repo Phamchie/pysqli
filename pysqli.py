@@ -1,3 +1,4 @@
+# updated
 import requests
 import os
 import re
@@ -310,12 +311,6 @@ for payload in payload_name_bypass_1:
                 else:
                     end_time = datetime.datetime.now().strftime("Ending Time : %H:%M:%S - /%d/%m/%Y")
                     exit(end_time)
-        else:
-            print("Target Not Responding Columns...")
-            end_time = datetime.datetime.now().strftime("Ending Time : %H:%M:%S - /%d/%m/%Y")
-            exit(end_time)
-        exit()
-
     else:
         print("[?] connected failed")
         exit()
