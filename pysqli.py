@@ -1,4 +1,3 @@
-# updated
 import requests
 import os
 import re
@@ -94,7 +93,7 @@ for payload in payload_name_bypass_1:
                             print("PARAMETER : user")
                             print("[+] URL : {}".format(url))
                             print("[+] PAYLOAD : {}".format(new_payload))
-                            print("[+] LINK : {}{}".format(url, payload))
+                            print("[+] LINK : {}{}".format(url, new_payload))
                             print("----------------------------")
                             print("database name mysql")
                             print("PARAMETER : database name")
