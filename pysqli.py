@@ -1,4 +1,6 @@
-# updated success v1.1.5
+# Python SQL Injection
+# V 1.1.5
+# Copyright : Pham Chien
 import requests
 import os
 import re
@@ -282,7 +284,7 @@ for payload in payload_name_bypass_1:
                             print("PARAMETER : user")
                             print("[+] URL : {}".format(url))
                             print("[+] PAYLOAD : {}".format(new_payload))
-                            print("[+] LINK : {}{}".format(url, payload))
+                            print("[+] LINK : {}{}".format(url, new_payload))
                             print("Output : ")
                             html_content = result_1.text
                             get = BeautifulSoup(html_content, 'html.parser')
