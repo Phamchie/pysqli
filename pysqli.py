@@ -7,21 +7,13 @@ import time
 from bs4 import BeautifulSoup
 
 os.system('cls' if os.name == 'nt' else 'clear')
-def banner():
-    print("""                    
-                                 _ _ 
-                 ___ _ _ ___ ___| |_| {1.1.2}
-                | . | | |_ -| . | | |
-                |  _|_  |___|_  |_|_| 
-                |_| |___|     |_|    
-                                
-[...:::       Copyright By Pham Chien        :::...]
-[...:::   Code By TEAM : ghostman security   :::...]
-[...:::  website : ghostmanews.blogspot.com  :::...]
-[...:::     github : github.com/Phamchie     :::...]
-[...:::       Twitter : @Anonym0us_VNPC      :::...]
-""")
-banner()
+
+with open('../hello_world/hello.txt', 'r') as banner:
+    content = banner.read()
+    print("")
+    print(content)
+
+print("")
 url = input("URL TARgET : ")
 print("")
 time_start = datetime.datetime.now()
@@ -428,3 +420,5 @@ for payload in payload_name_bypass_1:
     else:
         print("[?] connected failed")
         exit()
+
+
