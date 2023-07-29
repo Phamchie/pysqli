@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
-with open('var/www/hello.py', 'r') as banner:
+with open('var/www/hello.txt', 'r') as banner:
     content = banner.read()
     print("")
     print(content)
