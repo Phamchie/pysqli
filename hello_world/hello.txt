@@ -1,11 +1,1 @@
-                                 _ _ 
-                 ___ _ _ ___ ___| |_| {1.1.2}
-                | . | | |_ -| . | | |
-                |  _|_  |___|_  |_|_| 
-                |_| |___|     |_|    
-                                
-[...:::       Copyright By Pham Chien        :::...]
-[...:::   Code By TEAM : ghostman security   :::...]
-[...:::  website : ghostmanews.blogspot.com  :::...]
-[...:::     github : github.com/Phamchie     :::...]
-[...:::       Twitter : @Anonym0us_VNPC      :::...]
+cc
